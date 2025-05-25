@@ -24,7 +24,7 @@ class Program
     private static readonly string mistralUrl = "https://api.mistral.ai/v1/chat/completions";
     private static readonly HttpClient httpClient = new HttpClient();
 
-    static async Task Main()
+    static async Task Main(string[] args)
     {
         System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
         Env.Load();
@@ -206,15 +206,17 @@ class Program
                 {
                     if (data == "confirm_yes")
                     {
+                        await botClient.DeleteMessage(chatId: callback.Message.Chat.Id, messageId: callback.Message.MessageId, cancellationToken: token); 
                         await botClient.AnswerCallbackQuery(callback.Id, "Дані підтверджено!");
                         await botClient.SendMessage(userId, "Добре! Тепер, будь ласка, надішліть фото техпаспорта автомобіля.", cancellationToken: token);
                         UserStates[userId] = "awaiting_car_document";
                     }
                     else if (data == "confirm_no")
                     {
+                        await botClient.DeleteMessage(chatId: callback.Message.Chat.Id, messageId: callback.Message.MessageId, cancellationToken: token);
                         await botClient.AnswerCallbackQuery(callback.Id, "Дані не підтверджено.");
                         await botClient.SendMessage(userId, "Будь ласка, надішліть чіткіше фото документа.", cancellationToken: token);
-                        UserStates[userId] = "waiting_correction";
+                        UserStates[userId] = "awaiting_passport";
                     }
                 }
                 else if (state == "awaiting_car_document_confirmation")
@@ -230,15 +232,16 @@ class Program
                                 InlineKeyboardButton.WithCallbackData("Відмовитись", "decline_policy"),
                             }
                         });
-
+                        await botClient.DeleteMessage(chatId: callback.Message.Chat.Id, messageId: callback.Message.MessageId, cancellationToken: token);
                         await botClient.SendMessage(userId,"Добре! Поліс автострахування вартує 100$. Бажаєте придбати?",replyMarkup: keyboard,cancellationToken: token);
                         UserStates[userId] = "awaiting_policy_decision";
                     }
                     else if (data == "confirm_car_no")
                     {
+                        await botClient.DeleteMessage(chatId: callback.Message.Chat.Id, messageId: callback.Message.MessageId, cancellationToken: token);
                         await botClient.AnswerCallbackQuery(callback.Id, "Дані не підтверджено.");
                         await botClient.SendMessage(userId, "Будь ласка, надішліть чіткіше фото документа.", cancellationToken: token);
-                        UserStates[userId] = "waiting_correction";
+                        UserStates[userId] = "awaiting_car_document";
                     }
                     return;
                 }
@@ -246,7 +249,7 @@ class Program
                 {
                     if (data == "buy_policy")
                     {
-                        await botClient.AnswerCallbackQuery(callback.Id, "Вітаю! Ви придбали страховий поліс!");
+                        await botClient.DeleteMessage(chatId: callback.Message.Chat.Id,messageId: callback.Message.MessageId,cancellationToken: token); await botClient.AnswerCallbackQuery(callback.Id, "Вітаю! Ви придбали страховий поліс!");
                         await botClient.SendMessage(userId, "Дякуємо за покупку! Ваш страховий поліс оформлено.", cancellationToken: token);
                         await botClient.SendMessage(userId, "Генерую страховий поліс, зачекайте...");
 
@@ -262,6 +265,7 @@ class Program
 
                         var inputFile = new InputFileStream(pdfStream, "insurance_policy.pdf");
                         await botClient.SendDocument(userId, inputFile, "Ваш страховий поліс");
+
 
                         pdfStream.Dispose();
                     }
@@ -371,7 +375,7 @@ class Program
             new
             {
                 role = "user",
-                content = "Згенеруй типовий текст страхового полісу для автомобіля."
+                content = "Згенеруй типовий текст страхового полісу для автомобіля на англійській."
             }
         },
             max_tokens = 500
@@ -413,21 +417,17 @@ class Program
         var document = new iTextSharp.text.Document(iTextSharp.text.PageSize.A4, 40, 40, 40, 40);
 
         var writer = PdfWriter.GetInstance(document, ms);
-        writer.CloseStream = false; 
+        writer.CloseStream = false;
 
         document.Open();
 
-        var baseFont = BaseFont.CreateFont(
-            "c:/windows/fonts/arial.ttf",
-            BaseFont.IDENTITY_H,
-            BaseFont.EMBEDDED);
-
+        var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
         var font = new iTextSharp.text.Font(baseFont, 12, iTextSharp.text.Font.NORMAL);
 
         var paragraph = new Paragraph(text, font);
         document.Add(paragraph);
 
-        document.Close(); 
+        document.Close();
         ms.Position = 0;
 
         return ms;
