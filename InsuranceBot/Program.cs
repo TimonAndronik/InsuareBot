@@ -29,10 +29,20 @@ class Program
 
     static async Task Main(string[] args)
     {
-        System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+       System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
         Env.Load();
 
+        var builder = WebApplication.CreateBuilder(args);
+        var app = builder.Build();
+
+        // Health check endpoint
+        app.MapGet("/", () => "Bot is running!");
+
+        // Читаємо порт з Railway / Heroku, або використовуємо 3000
+        var port = Environment.GetEnvironmentVariable("PORT") ?? "3000";
+
         dataBaseService = new DataBaseService(dbConnection);
+
         if (string.IsNullOrEmpty(botToken))
         {
             Console.WriteLine("Токен не знайдено! Перевір .env файл.");
@@ -45,8 +55,10 @@ class Program
                 HandleError
             );
             Console.WriteLine("Бот запущено.");
-            await Task.Delay(-1);
         }
+
+        // Запускаємо веб-сервер
+        app.Run($"http://0.0.0.0:{port}");
     }
     static async Task HandleUpdate(ITelegramBotClient botClient, Update update, CancellationToken token)
     {
