@@ -31,10 +31,6 @@ class Program
     {
         System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
         Env.Load();
-        var builder = WebApplication.CreateBuilder(args);
-        var app = builder.Build();
-        app.MapGet("/", () => "Bot is running!");
-        var port = Environment.GetEnvironmentVariable("PORT") ?? "3000";
 
         dataBaseService = new DataBaseService(dbConnection);
         if (string.IsNullOrEmpty(botToken))
@@ -51,7 +47,6 @@ class Program
             Console.WriteLine("Бот запущено.");
             await Task.Delay(-1);
         }
-        app.Run($"http://0.0.0.0:{port}");
     }
     static async Task HandleUpdate(ITelegramBotClient botClient, Update update, CancellationToken token)
     {

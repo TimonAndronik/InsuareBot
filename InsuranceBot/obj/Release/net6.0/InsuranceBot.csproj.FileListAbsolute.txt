@@ -1,0 +1,6 @@
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.sourcelink.json
