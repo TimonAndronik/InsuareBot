@@ -1,0 +1,1 @@
+web: dotnet InsuranceBot/bin/Release/net8.0/publish/InsuranceBot.dll

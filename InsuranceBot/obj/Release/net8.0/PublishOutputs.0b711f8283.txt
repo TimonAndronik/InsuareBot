@@ -8,15 +8,8 @@ C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Docnet.Core.dll
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\DotNetEnv.dll
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\itextsharp.dll
-C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.Configuration.dll
-C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.Configuration.Binder.dll
-C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.Options.dll
-C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.Options.ConfigurationExtensions.dll
-C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Microsoft.Extensions.Primitives.dll
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Mindee.dll
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Newtonsoft.Json.dll
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net8.0\publish\Npgsql.dll
