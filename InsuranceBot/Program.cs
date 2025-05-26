@@ -35,10 +35,8 @@ class Program
         var builder = WebApplication.CreateBuilder(args);
         var app = builder.Build();
 
-        // Health check endpoint
         app.MapGet("/", () => "Bot is running!");
 
-        // Читаємо порт з Railway / Heroku, або використовуємо 3000
         var port = Environment.GetEnvironmentVariable("PORT") ?? "3000";
 
         dataBaseService = new DataBaseService(dbConnection);
