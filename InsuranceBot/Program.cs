@@ -34,7 +34,6 @@ class Program
 
         var builder = WebApplication.CreateBuilder(args);
         var app = builder.Build();
-
         app.MapGet("/", () => "Bot is running!");
 
         var port = Environment.GetEnvironmentVariable("PORT") ?? "3000";
