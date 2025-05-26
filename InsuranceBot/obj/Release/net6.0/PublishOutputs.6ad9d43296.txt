@@ -1,6 +1,14 @@
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\.env
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\InsuranceBot.exe
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\publish\web.config
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\web.config
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\publish\web.config
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\InsuranceBot.deps.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\InsuranceBot.runtimeconfig.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\InsuranceBot.staticwebassets.endpoints.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\publish\InsuranceBot.deps.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\publish\InsuranceBot.runtimeconfig.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\out\publish\InsuranceBot.staticwebassets.endpoints.json
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\publish\InsuranceBot.deps.json
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\publish\InsuranceBot.runtimeconfig.json
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\out\publish\InsuranceBot.staticwebassets.endpoints.json

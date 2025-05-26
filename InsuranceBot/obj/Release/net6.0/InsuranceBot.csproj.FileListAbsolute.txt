@@ -95,3 +95,11 @@ C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\refint\I
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.pdb
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\InsuranceBot.genruntimeconfig.cache
 C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\obj\Release\net6.0\ref\InsuranceBot.dll
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\publish\web.config
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\web.config
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\InsuranceBot.deps.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\InsuranceBot.runtimeconfig.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\InsuranceBot.staticwebassets.endpoints.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\publish\InsuranceBot.deps.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\publish\InsuranceBot.runtimeconfig.json
+C:\Users\ASUS\source\repos\InsuranceBot\InsuranceBot\bin\Release\net6.0\out\publish\InsuranceBot.staticwebassets.endpoints.json
